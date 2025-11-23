@@ -25,7 +25,7 @@ if (!admin.apps.length) {
 
 const db = admin.database();
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
     // Only allow POST requests for this critical action
     if (req.method !== 'POST') {
         return res.status(405).json({ error: 'Method Not Allowed' });
